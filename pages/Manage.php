@@ -10,6 +10,7 @@ if (isset($_POST['submit'])){
 
     $name = $_POST['name'];
     $info = $_POST['info'];
+    $design =$_POST['design'];
     $price = $_POST['price'];
     $count = $_POST['count'];
 
@@ -17,7 +18,7 @@ if (isset($_POST['submit'])){
     $pictmp = $_FILES['pic']['tmp_name'];
     move_uploaded_file($pictmp,"../assets/pics/bijoux/$picname");
 
-    $insert_new_product = $connect->query("INSERT INTO products (name,info,price,pic,count) VALUES  ('$name','$info','$price','$picname','$count')");
+    $insert_new_product = $connect->query("INSERT INTO products (name,info,design,price,pic,count) VALUES  ('$name','$info','$design','$price','$picname','$count')");
     if ($insert_new_product){
         header("location:Accueil.php");
     }else{
@@ -54,6 +55,11 @@ if (isset($_POST['submit'])){
         <label for="info">info de produit : </label>
         <textarea id="info" type="text" name="info"></textarea>
     </div>
+    
+    <div class="group log-input">
+        <label for="design">design : </label>
+        <textarea id="design" type="text" name="design"></textarea>
+    </div>
 
     <div class="group log-input">
         <label for="price">prix de produit : </label>
@@ -73,7 +79,8 @@ if (isset($_POST['submit'])){
     <button type="submit" name="submit" value="ok" class="btn btn-outline-secondary"> ajouter le produit </button>
 
 </form>
-
+      <br>
+      <br>
 <div class="row">
       <?php
          include('../include/footer.php');       

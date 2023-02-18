@@ -106,8 +106,25 @@
   <!-- Grid container -->
   <div class="container pt-4">
     <!-- Section: Social media -->
+    <p style="color: rgb(0, 0, 0)!important;"> Toutes les bijoux sont faites main et créées à partir de pierres naturelles,
+    <br> que j'ai choisies moi-même : cornaline, perle d'eau douce, rhodochrosite, coquillage, 
+    <br> jade africain, et bien d'autres encore !
+    </p>
+     <br>
+    <p style="color:  #EF465A !important;">⤷ La livraison est gratuite avec Ecovelo.</p>
+    <br>
+     <img src= ../assets/pics/ecovelo.png   width="150px"  height="150px">
+     <br>
     <section class="mb-4">
  
+<!-- 
+      Fardesign
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="http://fardesign.fr"
+        role="button"
+        data-mdb-ripple-color="dark"
+       img="./assets/pics/ecovelo.png"></a> -->
 
       <!-- Vimeo -->
       <a

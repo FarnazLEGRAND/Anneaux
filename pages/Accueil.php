@@ -20,8 +20,9 @@ include "../include/Header.php";
 
 
 
-   <div style="text-align: center;margin-top: 4em;"> <marquee behavior="front" direction="" style="color:#EF465A; margin-top:-200px" > <center><h2> Bienvenue chez Anneaux!
-      <br><?php echo $_SESSION['nom']?><br></h2></center></marquee>
+  
+<div style="text-align: center;margin-top: 4em;"> <marquee behavior="front" direction="" style="color:#EF465A; margin-top:-200px" > <center><h2> Bienvenue chez Anneaux!
+      <br><?php if (isset($_SESSION['nom'])){echo $_SESSION['nom'];}?><br></h2></center></marquee>
    <!-- style="margin-top:-50px"  style pour type marquer shenavar-->
   
       <img src="../assets/pics/anneauxbag.gif" class="img-fluid" alt="..." >
@@ -39,7 +40,11 @@ include "../include/Header.php";
       <br>
       <br>
       <h1>Vente de bijoux fait-main !</h1>
-       Si fabriquer vos créations à la main est devenue votre passion depuis un
+      Colliers, bracelets, boucles d’oreilles,… 
+      <br> Retrouvez les propriétés des pierres naturelles utilisées, 
+      <br>lors de la confection de vos bijoux. 
+      <br>
+      <br>Si fabriquer vos créations à la main est devenue votre passion depuis un
       <br> certain temps et que vos copines et copains sont de véritables fans de vos bijoux, 
       <br> l'heure est peut-être venue d'apprendre à les vendre !
 <br><br>

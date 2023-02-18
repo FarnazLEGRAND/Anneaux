@@ -10,16 +10,16 @@ if (isset($_POST['username'])){
     if ($username == 'admin' && $password == 'admin'){
         $_SESSION['username'] = $username;
         $_SESSION['admin'] = 'ok';
-        header("location: Accueil.php");
-        exit();
+        header("location:Accueil.php");
+        return;
     }
 
     $select_client = $connect->query("SELECT * FROM client WHERE username = '$username' AND password='$password'")->fetch_assoc();
     if ($select_client){
         $_SESSION['username'] = $username;
         $_SESSION['nom'] = $select_client['nom'];
-        header("location: ./Accueil.php");
-        exit();
+        header("location:Accueil.php");
+        return;
     }else{
         echo "username ou mot de passe erroné";
         
